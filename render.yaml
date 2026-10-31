@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: imposter-word
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 8000
